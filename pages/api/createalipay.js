@@ -39,8 +39,8 @@ export default async function handler(req, res) {
         subject: subject,
         product_code: "FAST_INSTANT_TRADE_PAY",
       },
-      returnUrl: 'http://localhost:3000/dream',
-      notifyUrl: "http://localhost:3000/api/alipayNotify", // 服务器异步通知
+      returnUrl: 'https://idphotogenerator.vercel.app/dream',
+      notifyUrl: "https://idphotogenerator.vercel.app/api/alipayNotify", // 服务器异步通知
     });
 
     return res.status(200).json({ payHtml: result });
